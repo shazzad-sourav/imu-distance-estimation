@@ -1,0 +1,169 @@
+{
+  "cv_runs": {
+    "Integration": {
+      "MAE_m": 3.0322835944275432,
+      "mean_error_m": -2.9624246778548766,
+      "MAPE_pct": 60.645671888550865,
+      "worst_m": 4.435047558228867,
+      "by_recording": {
+        "straight_slow": 3.4014323696643674,
+        "straight_fast": 2.897534304628377,
+        "curve_slow": 3.4382172830154993,
+        "curve_fast": 2.3919504204019284
+      }
+    },
+    "Constant speed": {
+      "MAE_m": 0.38499371628547274,
+      "mean_error_m": 0.04535014960406118,
+      "MAPE_pct": 7.699874325709455,
+      "worst_m": 1.1539938002731622,
+      "by_recording": {
+        "straight_slow": 0.18868475953929753,
+        "straight_fast": 0.5063276533556701,
+        "curve_slow": 0.588960465894875,
+        "curve_fast": 0.2560019863520483
+      }
+    },
+    "Random Forest": {
+      "MAE_m": 0.3457958108571155,
+      "mean_error_m": -0.0037319487355360836,
+      "MAPE_pct": 6.9159162171423105,
+      "worst_m": 1.3492825190010551,
+      "by_recording": {
+        "straight_slow": 0.19111243061976896,
+        "straight_fast": 0.426151134283283,
+        "curve_slow": 0.36402342020956835,
+        "curve_fast": 0.40189625831584186
+      }
+    },
+    "SVR": {
+      "MAE_m": 0.357229012320271,
+      "mean_error_m": -0.046736309156971426,
+      "MAPE_pct": 7.14458024640542,
+      "worst_m": 0.9052067729686817,
+      "by_recording": {
+        "straight_slow": 0.274768936414339,
+        "straight_fast": 0.43621561182665286,
+        "curve_slow": 0.3007692675365652,
+        "curve_fast": 0.4171622335035269
+      }
+    },
+    "CNN-GRU": {
+      "MAE_m": 0.3673326403833926,
+      "mean_error_m": -0.037946921568363615,
+      "MAPE_pct": 7.3466528076678514,
+      "worst_m": 0.9241933479905136,
+      "by_recording": {
+        "straight_slow": 0.26399442449212085,
+        "straight_fast": 0.45107359595596774,
+        "curve_slow": 0.4183074275404217,
+        "curve_fast": 0.33595511354505997
+      }
+    }
+  },
+  "cv_windows": {
+    "Random Forest": {
+      "MAE": 0.051983130142357975,
+      "RMSE": 0.07730834054343928,
+      "R2": 0.9381740203022946
+    },
+    "SVR": {
+      "MAE": 0.05252008442399157,
+      "RMSE": 0.07536000125248551,
+      "R2": 0.9412510513766972
+    },
+    "CNN-GRU": {
+      "MAE": 0.050020746666809855,
+      "RMSE": 0.06954321721546998,
+      "R2": 0.9499703043155733
+    }
+  },
+  "test_27m": {
+    "Integration": 6.209952093438978,
+    "Constant speed": 27.99103402254128,
+    "Random Forest": 23.251930324073488,
+    "SVR": 23.56677921945511,
+    "CNN-GRU": 24.247886657714844
+  },
+  "fold_models": [
+    {
+      "rf": {
+        "max_depth": null,
+        "min_samples_leaf": 1,
+        "n_estimators": 200
+      },
+      "svr": {
+        "svr__C": 1,
+        "svr__epsilon": 0.02,
+        "svr__gamma": 0.01
+      },
+      "cnn_best_epoch": 47
+    },
+    {
+      "rf": {
+        "max_depth": 10,
+        "min_samples_leaf": 1,
+        "n_estimators": 200
+      },
+      "svr": {
+        "svr__C": 1,
+        "svr__epsilon": 0.02,
+        "svr__gamma": 0.01
+      },
+      "cnn_best_epoch": 44
+    },
+    {
+      "rf": {
+        "max_depth": null,
+        "min_samples_leaf": 1,
+        "n_estimators": 200
+      },
+      "svr": {
+        "svr__C": 1,
+        "svr__epsilon": 0.02,
+        "svr__gamma": "scale"
+      },
+      "cnn_best_epoch": 38
+    },
+    {
+      "rf": {
+        "max_depth": 10,
+        "min_samples_leaf": 1,
+        "n_estimators": 200
+      },
+      "svr": {
+        "svr__C": 1,
+        "svr__epsilon": 0.02,
+        "svr__gamma": 0.01
+      },
+      "cnn_best_epoch": 36
+    },
+    {
+      "rf": {
+        "max_depth": null,
+        "min_samples_leaf": 1,
+        "n_estimators": 200
+      },
+      "svr": {
+        "svr__C": 1,
+        "svr__epsilon": 0.02,
+        "svr__gamma": 0.01
+      },
+      "cnn_best_epoch": 39
+    }
+  ],
+  "final_model": {
+    "rf": {
+      "max_depth": 10,
+      "min_samples_leaf": 1,
+      "n_estimators": 200
+    },
+    "svr": {
+      "svr__C": 1,
+      "svr__epsilon": 0.02,
+      "svr__gamma": 0.01
+    },
+    "cnn_best_epoch": 58
+  },
+  "seed": 0
+}
